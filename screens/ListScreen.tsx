@@ -32,7 +32,7 @@ export default function ListScreen() {
   ):(
     <View style={styles.container}>
       {assets && assets.length > 0 &&(
-        <ScrollView>
+        <ScrollView testID='assets-container'>
           {assets.map((item, index) => (
             <TouchableOpacity style={AssetsStyles.container} key={item.id} onPress={()=>handleTouchItem(item.id, index+1)}>
               <AssetHeader asset={item} index={index+1}/>

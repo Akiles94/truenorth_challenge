@@ -48,7 +48,7 @@ function App() {
           switch(currentRouteName){
             case "List":                          
               setLoading(true);            
-              await getAssetsService({setAssets,setLoading,navigator});            
+              await getAssetsService({setAssets, setLoading, navigator});            
               break;
             case "Detail":                                                    
               setLoading(true);

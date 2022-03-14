@@ -4,14 +4,16 @@ import { Colors } from '../../config/theme';
 
 type Props ={
     label: string,
-    action: ()=> void
+    action: ()=> void,
+    testID?: string
 }
 
-const Button = ({label, action}:Props)=>{
+const Button = ({label, action, testID}:Props)=>{
     return(
         <TouchableOpacity 
             style={styles.btnContainer}
             onPress={action}
+            testID={testID}
         >
             <Text style={styles.txtLabel}>{label}</Text>
         </TouchableOpacity>

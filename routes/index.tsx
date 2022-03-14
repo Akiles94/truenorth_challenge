@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { LeftHeaderNav } from '../components/common';
-import IconHeaderTitle from '../components/common/IconHeaderTitle';
+import IconHeaderTitle from '../components/ui/IconHeaderTitle';
 import WalletTabs from './wallet';
 import { 
     HomeScreen,
@@ -26,15 +26,14 @@ const Router = ()=>{
               },
               headerLeft: route => (<LeftHeaderNav label={route.label?route.label:""}/>)    
           })}
-        >                   
-          <Stack.Screen name="ToDo" component={ToDoScreen} />
+        >                             
           <Stack.Screen 
             name="Home" 
             component={HomeScreen} 
             options={{
               headerTitle: props => (<IconHeaderTitle {...props}/>),
             }}
-          />          
+          />                    
           <Stack.Screen 
             name="Error" 
             component={ErrorScreen} 
@@ -42,6 +41,7 @@ const Router = ()=>{
               headerLeft:()=>(<></>)
             }}
           />
+          <Stack.Screen name="ToDo" component={ToDoScreen} />
           <Stack.Screen name="List" component={ListScreen} />
           <Stack.Screen name="Loader" component={Loader} />
           <Stack.Screen name="Detail" component={DetailScreen} />

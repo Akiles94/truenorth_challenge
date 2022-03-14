@@ -6,6 +6,7 @@ type Props = {
     setValue: (text:string)=> void
     placeholder?: string
     password?: boolean
+    testID?: string
 }
 
 const Input = ({
@@ -13,6 +14,7 @@ const Input = ({
     placeholder,
     setValue,
     password,
+    testID,
     ...props
 }:Props)=>{
     return(
@@ -22,6 +24,7 @@ const Input = ({
                 value={value}
                 onChangeText={(text)=>setValue(text)}
                 secureTextEntry={password?password:false}
+                testID={testID}
             />
         </View>
     )

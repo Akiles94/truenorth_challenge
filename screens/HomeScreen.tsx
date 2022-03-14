@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Alert, StyleSheet, Text, View } from 'react-native';
-import Button from '../components/common/Button';
-import Input from '../components/common/Input';
+import Button from '../components/ui/Button';
+import Input from '../components/ui/Input';
 import { useNavigation } from '@react-navigation/native';
 import DataContext from '../components/contexts/DataContext';
 
@@ -42,14 +42,16 @@ export default function HomeScreen() {
         value={name}
         placeholder="Enter your name"
         setValue={setName}
+        testID="input-username"
       />
       <Input
         value={pass}
         placeholder="Enter your password"
         setValue={setPass}  
         password
+        testID="input-password"
       />
-      <Button label="Sign In" action={handleSignIn} />
+      <Button label="Sign In" action={handleSignIn} testID="button-next"/>
     </View>
   );
 }

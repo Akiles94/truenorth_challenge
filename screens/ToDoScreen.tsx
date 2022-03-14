@@ -20,7 +20,8 @@ export default function HomeScreen() {
       </View>        
       <Button 
         label="Get Started" 
-        action={() => navigator.navigate("Home")}         
+        action={() => navigator.navigate("Home")} 
+        testID="button-next"        
       />
     </View>
   );
